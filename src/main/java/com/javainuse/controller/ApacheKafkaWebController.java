@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.RestController;
 import com.javainuse.service.KafkaSender;
 
 @RestController
-@RequestMapping(value = "/javainuse-kafka/")
+@RequestMapping(value = "/pact/")
 public class ApacheKafkaWebController {
 
 	@Autowired
 	KafkaSender kafkaSender;
 
-	@GetMapping(value = "/producer")
+	@GetMapping(value = "/:producer")
 	public String producer(@RequestParam("message") String message) {
 		kafkaSender.send(message);
 
