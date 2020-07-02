@@ -8,6 +8,6 @@ spring:
         key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
         value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
      producer:
-        bootstrap-servers: localhost:9092
+        bootstrap-servers: 172.30.99.56:9092
         key-serializer: org.apache.kafka.common.serialization.StringSerializer
         value-serializer: org.apache.kafka.common.serialization.StringSerializer
