@@ -1,4 +1,4 @@
-opackage com.javainuse.service;
+package com.javainuse.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
