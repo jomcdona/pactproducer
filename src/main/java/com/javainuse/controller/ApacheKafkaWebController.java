@@ -15,7 +15,7 @@ public class ApacheKafkaWebController {
 	@Autowired
 	KafkaSender kafkaSender;
 
-	@GetMapping(value = "/:producer")
+	@GetMapping(value = "/producer")
 	public String producer(@RequestParam("message") String message) {
 		kafkaSender.send(message);
 
