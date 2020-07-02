@@ -1,21 +1,21 @@
 package com.javainuse.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.javainuse.service.KafkaSender;
+import com.javainuse.service.Producer;
 
 @RestController
 @RequestMapping(value = "/pact/")
 public class ApacheKafkaWebController {
 
 	@Autowired
-	KafkaSender kafkaSender;
+	Producer kafkaSender;
 
-	@GetMapping(value = "/producer")
+	@PostMapping(value = "/producer")
 	public String producer(@RequestParam("message") String message) {
 		kafkaSender.send(message);
 
