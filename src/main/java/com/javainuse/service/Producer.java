@@ -10,7 +10,7 @@ public class Producer {
 	@Autowired
 	private KafkaTemplate<String, String> kafkaTemplate;
 	
-	String kafkaTopic = "pact_topic";
+	String kafkaTopic = "pact-untranslated";
 	
 	public void send(String data) {
 	    
