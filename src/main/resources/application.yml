@@ -7,6 +7,6 @@ spring:
         key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
         value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
      producer:
-        bootstrap-servers: pact-cluster-kafka-brokers.kafka.svc.cluster.local:9092
+        bootstrap-servers: pact-cluster-kafka-brokers.pact.svc.cluster.local:9092
         key-serializer: org.apache.kafka.common.serialization.StringSerializer
         value-serializer: org.apache.kafka.common.serialization.StringSerializer
