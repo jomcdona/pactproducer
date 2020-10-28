@@ -19,7 +19,7 @@ public class PactProducerController {
 	public String producer(@RequestParam("message") String message) {
 		kafkaSender.send(message);
 
-		return "Message " + messsage + "sent to the Kafka Topic pact-untranslated Successfully";
+		return "Message " + message + "sent to the Kafka Topic pact-untranslated Successfully";
 	}
 
 }
